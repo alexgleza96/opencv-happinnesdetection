@@ -7,9 +7,8 @@ import wave
 def emotionImage(emotion):
     if emotion == 'Felicidad':
         image = cv2.imread('fel_res.jpeg')
-        pathaudio = r"C:\Users\Alex\PycharmProjects\opencv\felicidad.wav"
         diraudio = os.path.dirname(__file__)
-        pathaudio = os.path.join(diraudio,r"C:\Users\Alex\PycharmProjects\opencv\felicidad.wav")
+        pathaudio = os.path.join(diraudio,"felicidad.wav")
         f = wave.open(pathaudio,"rb")
         p = pyaudio.PyAudio()
         stream = p.open(format=p.get_format_from_width(f.getsampwidth()), channels=f.getnchannels(),
@@ -31,10 +30,8 @@ method = 'LBPH'
 emotion_recognizer = cv2.face.LBPHFaceRecognizer_create()
 emotion_recognizer.read('modelo' + method + '.xml')
 # --------------------------------------------------------------------------------
-dataPath = r"C:\Users\Alex\PycharmProjects\opencv\Data"
 dirname = os.path.dirname(__file__)
-dataPath = os.path.join(dirname,r"C:\Users\Alex\PycharmProjects\opencv\Data")
-
+dataPath = os.path.join(dirname,"Data")
 imagePaths = os.listdir(dataPath)
 print('imagePaths=', imagePaths)
 

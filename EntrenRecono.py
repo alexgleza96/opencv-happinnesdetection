@@ -15,9 +15,8 @@ def obtenerModelo(method, facesData, labels):
     # Almacenando el modelo obtenido
     emotion_recognizer.write("modelo" + method + ".xml")
 
-dataPath = r"C:\Users\Alex\PycharmProjects\opencv\Data"
 dirname = os.path.dirname(__file__)
-dataPath = os.path.join(dirname,r"C:\Users\Alex\PycharmProjects\opencv\Data")
+dataPath = os.path.join(dirname,"Data")
 emotionsList = os.listdir(dataPath)
 
 print('Lista de personas: ', emotionsList)

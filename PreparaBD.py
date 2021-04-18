@@ -5,10 +5,8 @@ import imutils
 # Creando carpeta con emocion de felicidad
 emotionName = 'Felicidad'
 
-dataPath = r"C:\Users\Alex\PycharmProjects\opencv\Data"
-dirname = os.path.dirname(__file__)
-dataPath = os.path.join(dirname,r"C:\Users\Alex\PycharmProjects\opencv\Data")
-emotionsPath = dataPath + '\\' + emotionName
+dataPath = os.path.dirname(__file__)
+emotionsPath = dataPath + '\\' +'Data' + '\\' + emotionName
 
 
 if not os.path.exists(emotionsPath):
