@@ -1,6 +1,6 @@
 # opencv-happinnesdetection
 * run script PreparaBD
-* run script ReconEmoc
+* run script EntrenRecono
 * run script Reconociendo_Emocion
 
 
